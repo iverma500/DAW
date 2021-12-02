@@ -1,0 +1,10 @@
+Priemro se recogerán los datos de un fichero .txt, se separarán los datos por cada salto de línea y se guardarán en un array de tipo string.
+Después este array se cargará en un select, siendo cada option un valor de dicho array.
+ 
+Aparecerá un botón que al ser pulsado aparecerá otro select donde se llenará con el valor de los options seleccionados del anterior select y se creará a su vez un objeto de tipo candidaos donde se guardará el valor de la posición del array y se le asignará el número de votos a cero. Se guardará cada objeto creado en un array de objetos de tipo Candidato.
+
+Después, se creará un párrafo y un botón por cada alumno de clase, cada alumno deberá seleccionar en el select de arriba a su candidato y pulsar su botón para sumarle un voto.
+
+Al hacer click al botón de votar, se llamará a una función donde se sumará un voto al candidato seleccionado.
+
+Al tener al menos un voto, aparecerá un botón para ver los resultados, si se pulsa, aparecerá en un párrafo los candidatos y su número de votos y el candidato que ha sido elegido como delegado.

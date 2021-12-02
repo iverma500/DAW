@@ -1,0 +1,4 @@
+peras;5
+manzanas;6
+coco;3
+plátanos;4

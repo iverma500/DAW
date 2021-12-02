@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function mostrarDatos() {
+
+                var inputValFecha = document.miFormulario.date.value;//document.getElementById("date").value;
+                var inputValRange = document.miFormulario.range.value;//document.getElementById("range").value;
+                var inputValTel = document.getElementById("tel").value;
+                var inputValPassword = document.getElementById("password").value;
+
+                var valoresAceptados = /^[0-9]+$/;
+                if (!inputValTel.match(valoresAceptados)){
+                    inputValTel = 0;
+                }
+
+                document.getElementById("datos").textContent = inputValFecha + "\n" + 
+                inputValRange + "% \n" + inputValTel + "\n" + inputValPassword;
+            }
+          </script>
+    </head>
+    <body>
+        <form name="miFormulario">
+            <pre id="datos">DATOS</pre>
+            <br>
+            <input type="date" id="date" required>
+            <br>
+            <input type="range" id="range" required>
+            <br>
+            <input type="tel" id="tel" min="0" max="9" required>
+            <br>
+            <input type="password" id="password">
+            <br>
+            <input type="button" onclick="mostrarDatos()" name="Enviar" value="Enviar">
+        </form>
+</html>

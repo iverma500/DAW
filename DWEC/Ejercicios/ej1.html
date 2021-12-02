@@ -1,0 +1,34 @@
+<html>
+<head></head>
+<body>
+    <script
+    type="text/javascript">
+    var num = prompt("Introduce un número: ");
+    var num2 = prompt("Introduce el segundo número: ");
+    var num3 = prompt("Introduce el tercer número: ");
+
+    if(!isNaN(num) && !isNaN(num2) && !isNaN(num3)){
+        if((num>=num2)&&(num2>=num3)){
+            alert(num + " " + num2 + " " + num3)
+        }
+        else if((num>=num3)&&(num3>=num2)){
+            alert(num + " " + num3 + " " + num2)
+        }
+        else if((num2>=num)&&(num>=num3)){
+            alert(num2 + " " + num + " " + num3)
+        }
+        else if((num2>=num3)&&(num3>=num)){
+            alert(num2 + " " + num3 + " " + num)
+        }
+        else if((num3>=num)&&(num>=num2)){
+            alert(num3 + " " + num + " " +num2)
+        }
+        else if((num3>=num2)&&(num2>=num)){
+            alert(num3 + " " + num2 + " " + num)
+        }
+    }else {
+        alert("Error en los datos introducidos")
+    }
+    </script>
+</body>
+</html>

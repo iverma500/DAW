@@ -1,0 +1,56 @@
+<html>
+<head></head>
+<body>
+    <script
+    type="text/javascript">
+    var num = prompt("Introduce un número: ");
+    if(!isNaN(num)){
+        operacion = prompt("Introduce la operación: ").trim().toUpperCase();
+        switch(operacion){
+            case 'SUMAR':
+                var sumar = parseInt(num)
+                sumaTotal = 0;
+                for(let i = num -1;i > 0; i--){
+                    sumar += i; 
+                    sumaTotal = sumar
+                }
+                alert("RESULTADO: "+sumaTotal)
+                break;
+            case 'RESTAR':
+                resta = num;
+                restaTotal = 0;
+                for(let i = num-1;i > 0; i--){
+                    resta -= i
+                    restaTotal = resta; 
+                }
+                alert("RESULTADO: "+restaTotal)
+                break;
+            case 'MULTIPLICAR':
+                multiplicar = num;
+                multiTotal = 1;
+                for(let i = num - 1;i > 0; i--){
+                    multiplicar *= i; 
+                    multiTotal = multiplicar;
+                }
+                alert("RESULTADO: "+multiTotal)
+                break;
+            case 'DIVIDIR':
+                dividir = num;
+                divisionTotal = 0;
+                for(let i = num -1;i > 0; i--){
+                    dividir /= i;
+                    divisionTotal = dividir; 
+                }
+                alert("RESULTADO: "+divisionTotal)
+                break;
+            default:
+                console.log("ERROR OPERACION NO VALIDA")
+                break;
+        }
+    } else {
+        alert("Dato introducido incorrecto")
+        console.log("NO ES UN NUMERO ERROR");
+    }
+    </script>
+</body>
+</html>

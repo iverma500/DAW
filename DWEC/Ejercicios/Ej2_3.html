@@ -1,0 +1,61 @@
+<html>
+    <head></head>
+    <body>
+        <script
+        type="text/javascript">
+
+            var trabajo1 = Number(prompt('Introduce nota primera practica: '));
+            var trabajo2 = Number(prompt('Introduce nota segunda practica: '));
+            var examen = Number(prompt('Introduce nota examen: '));
+            //validar entradas
+            var mediaTrabajos = 0; 
+            var notaTrabajos = 0;
+            var notaExamen = 0;
+            var mediaExTrab = 0;
+            var notaComportamiento = 1.0;
+            var notaFinal = 0;
+
+            if((trabajo1>=0 && trabajo1 <=10) && (trabajo2>= 0 && trabajo2 <= 10) && (examen>= 0&& examen<= 10)){
+                mediaTrabajos = (trabajo1 + trabajo2) / 2;
+                notaTrabajos = mediaTrabajos * 0.45;
+                notaExamen = examen * 0.45;
+                
+                if(trabajo1 >= 4 && trabajo2 >= 4){
+                    
+                    if(examen >= 4){
+
+                        mediaExTrab = (notaTrabajos + notaExamen);
+
+                        if(mediaExTrab >= 4.5){
+                            //Todo aprobado
+                            notaFinal = mediaExTrab + notaComportamiento;
+                            alert('Nota final: ' + notaFinal + " APROBADO") 
+                        } else {
+                            //media no llega a 4,5
+                            notaComportamiento = 0;
+                            notaFinal = mediaExTrab + notaComportamiento;
+                            alert('Nota final: ' + notaFinal + " SUSPENSO (MEDIA EXAMEN Y TRABAJOS < 4.5)") 
+                        }
+                    }else{
+                        //nota examen no llega a 4
+                        notaComportamiento = 0;
+                        notaFinal = notaTrabajos + notaComportamiento;
+                        alert('Nota final: ' + notaFinal + " SUSPENSO (MEDIA EXAMEN < 4)") 
+                    }
+                }else  if((trabajo1 < 4 || trabajo2 < 4) && examen >= 4){
+                    //nota media de trabajos no llega a 4
+                    notaComportamiento = 0;
+                    notaFinal = notaExamen + notaComportamiento;
+                    alert('Nota final: ' + notaFinal + " SUSPENSO (MEDIA TRABAJOS < 4)") 
+                } else if(trabajo1 < 4 && trabajo2 < 4 && examen < 4){
+                    //nota de trabajos ni examen llega a 4
+                    notaComportamiento = 0;
+                    notaFinal =notaTrabajos + notaExamen + notaComportamiento;
+                    alert('Nota final: ' + notaFinal + " SUSPENSO (TODAS LAS NOTAS SON < 4)") 
+                }
+            } else{
+                alert("error en los datos introducidos")
+            }
+        </script>
+    </body>
+</html>

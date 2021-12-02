@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <script
+    type="text/javascript">
+    letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+    var num = prompt("Introduce el número de DNI: ");
+    var letrasDNI = 'TRWAGMYFPDXDNJZSQVHLCKET';
+
+    if(!isNaN(num)){
+        // letra = num % 23;
+        alert('La letra es; ' + letrasDNI.charAt(num % 23));
+        
+        //  encontrarLetra(letras,letra);
+       
+    } else{
+        alert("Dato introducido incorrecto")
+        console.log("NO ES UN NUMERO ERROR");
+    }
+
+
+    /*function encontrarLetra (letras, num) {
+        alert(letras[num] + ' es la letra del DNI')
+        console.log(letras[num] + ' es la letra del DNI.');
+    } 
+    Funcion alternativa para realizar el ejercicio */ 
+    </script>
+    </body>
+</html>

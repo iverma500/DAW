@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function mostrarDatos() {
+
+                var select = document.getElementById("select");
+                var opcionSelect = select.options[select.selectedIndex].value;
+                document.getElementById('salidaSelect').textContent = "Resultado: " + opcionSelect;
+
+                document.getElementById('salidaDatalist').textContent = document.miFormulario.so.value;
+
+                var coches = document.getElementById("cars");
+
+                var optGroup1 = document.getElementById("grupo1");
+                var optGroup2 = document.getElementById("grupo2");
+
+                var grupoSeleccionado = document.querySelector('select[name="cars"] option:checked').parentElement.label;
+
+                if(grupoSeleccionado == optGroup1.label){
+                    document.getElementById("grupo1").disabled = true;
+                    document.getElementById("grupo2").disabled = false;
+
+                } 
+                if(grupoSeleccionado == optGroup2.label){
+                    document.getElementById("grupo1").disabled = false;
+                    document.getElementById("grupo2").disabled = true;
+                }
+
+            }
+          </script>
+    </head>
+    <body>
+        <form name="miFormulario">
+
+            <label>Elige día de la semana:</label>
+            <select id="select">
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miercoles">Miércoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+                <option value="Sabado">Sábado</option>
+                <option value="Domingo">Domingo</option>
+            </select>
+            <label id="salidaSelect"></label>
+
+            <br><br>
+
+            <label for="so">Elige tu opción de sistema operativo:</label>
+            <input list="datalist" name="so" id="so">
+            <datalist id="datalist">
+                <option value="Windows">Windows</option>
+                <option value="Mac">Mac</option>
+                <option value="Linux">Linux</option>
+                <option value="Debian">Debian</option>
+            </datalist>
+            <label id="salidaDatalist"></label>
+
+            <br><br>
+
+            <label for="cars">Choose a car:</label>
+            <select name="cars" id="cars">
+                <optgroup id="grupo1" label="Coches Suecos">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                </optgroup>
+                <optgroup id="grupo2" label="Coches Alemanes">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </optgroup>
+            </select>
+
+            <br><br>
+
+            <input type="button" id="boton" value="enviar" name="enviar" onclick="mostrarDatos()">
+        </form>
+</html>

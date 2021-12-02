@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Ventana Principal</title>
+	<script type="text/javascript">
+		function abrirSubVentana() {
+			nuevaVentana = window.open("UT3_ejemplo2_1.html", "sub", "height=300,width=400");
+		}
+
+		function cerrarSubVentana() {
+			if (nuevaVentana) {
+				nuevaVentana.close();
+			}
+		}
+		function copiarAHija() {
+			nuevaVentana.document.getElementById("textoDelPadre").value = document.getElementById('textoAHija').value;
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Ventana padre - principal</h1>
+	<form action="">
+		<p>Archivos: <br> <input type="file" name="archivos" id="archivos"></p>
+		<p>
+			<input type="button" value="Abrir sub ventana" id="abrir" onclick="abrirSubVentana()">
+			<input type="button" value="Cerrar sub ventana" id="cerrar" onclick="cerrarSubVentana()">
+		</p>
+		<p>
+			<label>Texto proveniente de la sub-ventana:</label>
+			<input type="text" id="original">
+			
+		<p>
+			<label>Texto a enviar de la sub-ventana:</label>
+			<input type="text" id="textoAHija">
+			<input type="button" value="Enviar texto a la ventana hija" id="btnEnviarHija" onclick="copiarAHija()" />
+			
+		</p>
+	</form>
+</body>
+
+</html>

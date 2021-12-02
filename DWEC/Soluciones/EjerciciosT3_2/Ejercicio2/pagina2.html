@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejercicio 2</title>
+</head>
+<body>
+<h1>PAGINA 2</h1>
+<p>IR A LA <a href="index.html">ANTERIOR PAGINA</a></p>
+<button id="back" onclick="goBack()">VOLVER</button>
+<button id="forward" onclick="goForward()">IR</button>
+<script type="text/javascript">
+function goBack() {
+	window.history.back();
+}
+
+function goForward() {
+	window.history.forward();
+}
+</script>
+</body>
+</html>

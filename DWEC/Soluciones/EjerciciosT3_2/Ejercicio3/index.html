@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset='utf-8'>
+        <title></title>
+        <style>
+        </style>
+        <script type="text/javascript">
+            //pagina prinicipal
+            document.write("<h1>TAREA DWEC03</h1><br>");
+
+            var persona = prompt("Introduce tu nombre y apellidos: ");
+            var any = prompt("Introduce tu año de nacimiento: ");
+            var mes = prompt("Introduce tu mes de nacimiento: ");
+            var dia = prompt("Introduce tu dia de nacimiento: ");
+            
+            let arrayNum = [34,67,23,75,35,19];
+            var array = persona.split(" ");
+            var nombre = array[0]; 
+
+            var posicionUltimaA = 0;
+            var posicionPrimeraA = 0;
+
+            for(var i = 0; i <= nombre.length; i++){
+                if(nombre.charAt(i) == 'A' || 
+                    nombre.charAt(i) == 'a' || 
+                    nombre.charAt(i) == 'á' ||
+                    nombre.charAt(i) == 'Á' ){
+                    posicionUltimaA = i;
+                }
+            }
+
+            for(var i = 0; i <= nombre.length; i++){
+                if(nombre.charAt(i) == 'A' || 
+                    nombre.charAt(i) == 'a' || 
+                    nombre.charAt(i) == 'á' ||
+                    nombre.charAt(i) == 'Á' ){
+                    posicionPrimeraA = i;
+                    break;
+                }
+            }
+
+            let fechaString = any + "-" + mes + "-" + dia;
+            if (mes.length == 1 && dia.length == 1){
+                 fechaString = any + "-0" + mes + "-0" + dia;
+            } else if (mes.length == 1 && dia.length != 1){
+                 fechaString = any + "-0" + mes + "-" + dia;
+            } else if (mes.length != 1 && dia.length == 1){
+                 fechaString = any + "-" + mes + "-0" + dia;
+            } else {
+                 fechaString = any + "-" + mes + "-" + dia;
+            }   
+            
+            let fechaDate = new Date(fechaString);
+            var anyFecha = fechaDate.getFullYear();
+
+            var hoy = new Date();
+            let anys = hoy.getFullYear() - anyFecha;
+
+            var weekday = new Array(7);
+                weekday[0] = "Domingo";
+                weekday[1] = "Lunes";
+                weekday[2] = "Martes";
+                weekday[3] = "Miércoles";
+                weekday[4] = "Jueves";
+                weekday[5] = "Viernes";
+                weekday[6] = "Sábado";
+
+            document.write("<h3>Buenos dias " + persona + "</h3>");
+            document.write("<h3>Tu nombre tiene " + persona.length + " caracteres,incluidos espacios</h3>");
+            document.write("<h3>La primera letra A de tu nombre esta en la posicion: " + posicionPrimeraA + "</h3>");
+            document.write("<h3>La ultima letra A de tu nombre esta en la posicion: " + posicionUltimaA + "</h3>");
+            document.write("<h3>Tu nombre menos 3 letras es: " + nombre.slice(0,-3) + "</h3>");
+            document.write("<h3>Tu nombre todo en mayusculas es: " + nombre.toUpperCase() + "</h3>");
+            document.write("<h3>Tu edad es: " + anys + "</h3>");
+            document.write("<h3>Naciste un feliz " + weekday[fechaDate.getDay()] + " del año " + any + "</h3>");
+            document.write("<h3>El coseno de 180 es: " + Math.cos(180) + "</h3>");
+
+            var mayor = arrayNum[0];
+            for (var i = 1;i <= arrayNum.length; i++){
+                if(mayor < arrayNum[i]){
+                    mayor = arrayNum[i];
+                }
+            }
+            document.write("<h3>El numero mayor de (34,67,23,75,35,19) es: " + mayor + "</h3>");
+            document.write("<h3>Número al azar: " + Math.random(1,1000) + "</h3>");
+
+            //abrir ventana
+            var subventana=window.open("", "", "height=600, width=800");
+            subventana.resizeTo(800,600);
+            //darla tamaño
+
+            realizar();
+
+            function realizar(){
+                subventana.document.write("<h3>Ejemplo de ventana nueva</h3>");
+                if(subventana.navigator.javaEnabled()){
+                    subventana.document.write("Java si está disponible en esta ventana<br>");
+                } else{
+                    subventana.document.write("Java no está disponible en esta ventana<br>");
+                }
+                subventana.document.write(navigator.appName + "<br>");
+                subventana.document.write(location.hostname+ "<br>");
+                subventana.document.write("Browser online: " + navigator.onLine+ "<br>");
+                subventana.document.write(navigator.appCodeName+ "<br>");
+                subventana.document.write("Browser version: " + navigator.appVersion+ "<br>");
+                subventana.document.write("User agent header: " + navigator.userAgent+ "<br>");
+                //escribir un texto en la pagina emergente
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function inicializar(){
+                document.getElementById("open").onclick = abrirVentana;
+            }
+            
+            var nuevaVentana;
+
+            function abrirVentana(){
+                var ancho = 800;
+                var alto = 400;
+                var x = (screen.width / 2) - (ancho/screen.width);
+                var y = (screen.height / 2) - (alto/screen.height);
+                nuevaVentana = window.open("https://aulavirtual3.educa.madrid.org/ies.lagunadejoatzel.getafe","","height="+ alto +
+                 ",width="+ ancho+",left=" + x + ",top=" + y);
+            }
+        </script>
+    </head>
+    <body onload="inicializar()">
+        <h1>Abrir educamadrid</h1>
+        <form>
+            <button id="open" value="open">Abrir Ventana</button>
+        </form>
+    </body>    
+</html>

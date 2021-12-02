@@ -1,0 +1,60 @@
+<html>
+    <head></head>
+    <body>
+        <script type="text/javascript">
+
+            let elementos = ["posicion1","posicion2","posicion3","posicion4"
+            ,"posicion5","posicion6","posicion7","posicion8","posicion9","posicion10"];
+            document.write("<h2>EJERCICIO 1: Visualiza por pantalla todo el contenido del array, separando cada dato en líneas distintas.</h2>");
+            document.write(elementos);
+            
+            elementos[elementos.length] = "posicion11";
+            document.write("<h2>EJERCICIO 2: Añade al array un dato más. (mediante el uso [longitud]</h2>");
+            document.write(elementos);
+
+            
+
+            elementos.push("posicion12","posicion13");
+            document.write("<h2>EJERCICIO 3: Añade al array dos datos más mediante utilizando un solo método.</h2>");
+            document.write(elementos);
+
+            
+
+            let datoPrincipio = elementos.unshift("posicion0");
+            document.write("<h2>EJERCICIO 4: Añade un dato más al principio del array.</h2>");
+            document.write(elementos);
+
+            document.write("<h2>EJERCICIO 5: Localiza un cierto dato dentro del array.</h2>");
+            document.write(elementos.indexOf("posicion7"));
+            
+
+            elementos.length = elementos.length - 3;
+            document.write("<h2>EJERCICIO 6: Elimina los últimos tres datos del array.</h2>");
+            document.write(elementos);
+            
+
+
+            document.write("<h2>EJERCICIO 7: Crea un sub-array llamado array_recortado con los datos del array elementos, comprendidos entre la posición 4 y 8 (ambos inclusive).</h2>");
+            let array_recortado = elementos;
+
+            for(var i = 0; i < array_recortado.length; i++){
+                if(i >= 4 && i <= 8){
+                    array_recortado.push(elementos[i]);
+                    document.write(array_recortado[i]);
+                }
+            }
+            
+            elementos = ["posicion1","posicion2","posicion3","posicion4"
+            ,"posicion5","posicion6","posicion7","posicion8","posicion9","posicion10"];
+            document.write("<h2>EJERCICIO 8: Crea un nuevo array llamado elementos_MYCLS con los datos del array elementos en mayúsculas.</h2>");
+            let elementos_MYCLS = elementos;
+            for(var i = 0;i < elementos.length; i++){
+                elementos_MYCLS[i] = elementos_MYCLS[i].toUpperCase();
+                
+            }
+            document.write(elementos_MYCLS);
+        </script>
+
+    </body>
+
+</html>

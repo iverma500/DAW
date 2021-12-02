@@ -1,0 +1,25 @@
+<html>
+    <head>
+    <script type = "text/javascript">
+        const vocales = ["a", "e", "i", "o", "u"]
+
+        function contarVocales() {
+            const string = document.getElementById("texto").value;
+            let contador = 0;
+
+            for (let letra of string.toLowerCase()) {
+                if (vocales.includes(letra)) {
+                    contador++;
+                }
+            }
+            document.getElementById("resultado").textContent = `Hay en total: ${contador} vocales`;
+            console.log(contador);
+        }
+    </script>
+    </head>
+    <body>
+        <input type = "text" id = "texto">
+        <input type = "submit" value = "Encuentra Vocales" onclick = "contarVocales();"><br>
+        <p id="resultado"></p>
+    </body>
+</html>

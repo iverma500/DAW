@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html lang="es-ES">   
+<head>     
+<meta charset="utf-8">     
+<title>Ejemplo de formulario básico</title>   
+<style>
+h1{text-align:center;
+padding-right: 100px;}
+body{background-color: yellow;
+text-align:left;}
+html{border-left:100px;
+padding-left: 50px;
+padding-right: 50px;}
+a{color: purple;}
+li{color: blue;}
+b{color: red;}
+input{background-color: greenyellow;}
+form{border: solid;
+border-color: black;
+border-width: 2px;
+background-color: lavender;
+display: inline-block; 
+text-align: center;
+display:block;
+  margin-left: auto;
+  margin-right: auto; }
+img{display:block;
+  margin-left: auto;
+  margin-right: auto;  }
+  
+</style>
+</head>   
+<body>  <!--1b_dam20_05@iesjovellanos.org-->
+<h1><i>Ejercicio 2 Diseño</i></h1>
+<img src="https://estaticos-cdn.prensaiberica.es/clip/7583e1dd-e048-4687-84cd-383a484e6b27_16-9-discover-aspect-ratio_default_0.jpg">
+<br><br><br>
+<ol>
+  <li>Lista <b>enumerada</b> 1</li>
+  <li>Lista <b>enumerada</b> 2</li>
+  <li>Lista <b>enumerada</b> 3</li>
+  <li>Lista <b>enumerada</b> 4</li>
+</ol>
+
+<ul>
+  <li>Lista <b>no enumerada</b> </li>
+  <li>Lista <b>no enumerada</b> </li>
+  <li>Lista <b>no enumerada</b> </li>
+  <li>Lista <b>no enumerada</b> </li>
+</ul>
+
+<br><br>
+<a href="https://google.com">Enlace a google</a>
+<br><br><br>
+<table border="2">
+  <tr>
+    <td>Celda 1</td>
+    <td>Celda 2</td>
+    <td>Celda 3</td>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+  </tr>
+  <tr>
+    <td>Celda 6</td>
+    <td>Celda 7</td>
+    <td>Celda 8</td>
+    <td>Celda 9</td>
+    <td>Celda 10</td>
+  </tr>
+  <tr>
+    <td>Celda 11</td>
+    <td>Celda 12</td>
+    <td>Celda 13</td>
+    <td>Celda 14</td>
+    <td>Celda 15</td>
+  </tr>
+</table>
+<br><br><br>
+<form method="Post"
+action="mailto:ivan.delasherasmartin@lagunadejoatzel.org"> 
+<br><br><br>
+Nombre: 
+<input type="text" name="nombre">
+<br>
+<br>
+Apellidos:
+<input type="text" name="apellidos">
+<br><br>
+Correo Electrónico:
+<input type="mail" name="correo">
+<br><br>
+Población:
+<input type="text" name="poblacion">
+<br><br>
+Provincia:
+<input type="text" name="provincia">
+<br><br>
+ Edad:
+ <br>
+<label><input type="radio"  name="edad" value="0-20" required>0-20 </label>
+<br>
+<label><input type="radio"  name="edad" value="20-40" required>20-40</label> 
+<br>
+<label><input type="radio"  name="edad" value="40-65" required>40-65</label> 
+<br>
+<label><input type="radio"  name="edad"  value="65+" required>65 o +</label> 
+<br>
+<br><br>
+¿Como nos conociste?
+<br><br>
+<input type="checkbox"  name="amigo"> A través de un amigo 
+<br>
+<input type="checkbox"  name="buscador"> A través de un Buscador
+  <br>
+<input type="checkbox"  name="red"> Navegando por la Red   
+<br>
+<input type="checkbox"  name="otros"> Otros 
+<br> <br> 
+Tiene alguna sugerencia...
+<br><br>
+<textarea  rows="8" cols="50" name="sugerencia" placeholder="Escriba aquí su sugerencia..."></textarea>
+<br><br>
+¿Cuánto navegas por Internet? ¡Señala la opción que más se acerque!
+<br><br>
+<select name="menu" size="2">  
+ <option  name="0-1h">Menos de 1 hora al dia</option>   
+ <option  name="1-2h">1-2 horas al dia</option>   
+ <option  name="2-3h">2-3 horas al dia</option>   
+ <option  name="3-4h">3-4 horas al dia</option>   
+ <option  name="4+h">Más de 4 horas al dia</option> 
+ </select>
+<br><br>
+<input type="submit" value="Enviar">
+<input type="reset" value="Borrar Formulario">
+<br><br><br>
+</form> 
+</body> 
+</html> 
